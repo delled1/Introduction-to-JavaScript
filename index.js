@@ -83,6 +83,44 @@ dogFeeder(0.5, 15);
 // use math.random to determine the computers choice
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number
 
+let user = prompt("Rock, paper, or scissors?");
+let computer = Math.random();
+if (computer <= 1 / 3) {
+  computer = "rock";
+} else if (computer <= 2 / 3) {
+  computer = "scissors";
+} else {
+  computer = "paper";
+}
+
+console.log(computer);
+
+let RPS = function (userChoice, computerChoice) {
+  if (userChoice === computerChoice) {
+    console.log("TIE GAME");
+  } else if (userChoice === "rock") {
+    if (computerChoice === "scissors") {
+      console.log("Rock wins!");
+    } else {
+      console.log(computerChoice + " wins!");
+    }
+  } else if (userChoice === "paper") {
+    if (computerChoice === "rock") {
+      console.log("Paper wins!");
+    } else {
+      console.log(computerChoice + " wins!");
+    }
+  } else if (userChoice === "scissors") {
+    if (computerChoice === "paper") {
+      console.log("Scissors wins!");
+    } else {
+      console.log(computerChoice + " wins!");
+    }
+  }
+};
+
+RPS(user, computer);
+
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
