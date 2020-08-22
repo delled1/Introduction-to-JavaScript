@@ -104,7 +104,7 @@ console.log("Computer 2 " + computer2);
 
 let RPS = function (computerChoice1, computerChoice2) {
   if (computerChoice1 === computerChoice2) {
-    console.log("TIE GAME");
+    console.log("TIE GAME!");
   } else if (computerChoice1 === "rock") {
     if (computerChoice2 === "scissors") {
       console.log("Rock wins!");
@@ -152,20 +152,20 @@ feetToCentimeteres(10);
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
 
-// for (let i = 99; i >= 0; i--) {
-//   if (i >= 1) {
-//     console.log(
-//       i +
-//         " bottles of soda on the wall, " +
-//         i +
-//         " bottles of soda, take one down pass it around " +
-//         (i - 1) +
-//         " bottles of soda on the wall"
-//     );
-//   } else {
-//     console.log("No more bottles of soda on the wall");
-//   }
-// }
+for (let i = 99; i >= 0; i--) {
+  if (i >= 1) {
+    console.log(
+      i +
+        " bottles of soda on the wall, " +
+        i +
+        " bottles of soda, take one down pass it around " +
+        (i - 1) +
+        " bottles of soda on the wall"
+    );
+  } else {
+    console.log("No more bottles of soda on the wall");
+  }
+}
 /************************************************************** Task 7 **************************************************************/
 //Grade Calculator
 //write a javaScript program that takes a mark out of 100 and returns a corisponding letter grade
@@ -201,40 +201,41 @@ grade(59);
 //Take Rock, Paper, Sissors further
 //update your rock papers sissors code below to take a prompt from a user using the window object
 
-// let user = prompt("Rock, paper, or scissors?");
-// let computer = Math.random();
-// if (computer <= 1 / 3) {
-//   computer = "rock";
-// } else if (computer <= 2 / 3) {
-//   computer = "scissors";
-// } else {
-//   computer = "paper";
-// }
+let user = prompt("Rock, paper, or scissors?");
+let computer = Math.random();
+if (computer <= 1 / 3) {
+  computer = "rock";
+} else if (computer <= 2 / 3) {
+  computer = "scissors";
+} else {
+  computer = "paper";
+}
 
-// console.log(computer);
+console.log("Your choice: " + user);
+console.log("Computer's choice: " + computer);
 
-// let RPS = function (userChoice, computerChoice) {
-//   if (userChoice === computerChoice) {
-//     console.log("TIE GAME");
-//   } else if (userChoice === "rock") {
-//     if (computerChoice === "scissors") {
-//       console.log("Rock wins!");
-//     } else {
-//       console.log(computerChoice + " wins!");
-//     }
-//   } else if (userChoice === "paper") {
-//     if (computerChoice === "rock") {
-//       console.log("Paper wins!");
-//     } else {
-//       console.log(computerChoice + " wins!");
-//     }
-//   } else if (userChoice === "scissors") {
-//     if (computerChoice === "paper") {
-//       console.log("Scissors wins!");
-//     } else {
-//       console.log(computerChoice + " wins!");
-//     }
-//   }
-// };
+let RPS2 = function (userChoice, computerChoice) {
+  if (userChoice === computerChoice) {
+    console.log("TIE GAME!");
+  } else if (userChoice === "rock") {
+    if (computerChoice === "scissors") {
+      console.log("Rock wins!");
+    } else {
+      console.log(computerChoice + " wins!");
+    }
+  } else if (userChoice === "paper") {
+    if (computerChoice === "rock") {
+      console.log("Paper wins!");
+    } else {
+      console.log(computerChoice + " wins!");
+    }
+  } else if (userChoice === "scissors") {
+    if (computerChoice === "paper") {
+      console.log("Scissors wins!");
+    } else {
+      console.log(computerChoice + " wins!");
+    }
+  }
+};
 
-// RPS(user, computer);
+RPS2(user, computer);
